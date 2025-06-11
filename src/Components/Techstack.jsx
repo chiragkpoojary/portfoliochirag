@@ -88,10 +88,10 @@ function TechStack() {
     };
 
     return (
-        <motion.div className="container mx-auto absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center mt-[62rem] sm:mt-[53rem] xl:mt-[43rem]"  >
-            <div className="flex flex-col items-center justify-center min-h-screen p-4 ">
+        <motion.div className="  text-center "  >
+            <div className="flex flex-col items-center justify-center">
                 <motion.h1 
-                    className="text-4xl sm:text-5xl md:text-6xl font-bold text-center mb-8 sm:h-24 mt-10"
+                    className="text-4xl sm:text-5xl md:text-6xl font-bold text-center mt-24"
                     style={{
                         backgroundImage: 'linear-gradient(to right, #818cf8, #06b6d4)',
                         WebkitBackgroundClip: 'text',
@@ -105,7 +105,7 @@ function TechStack() {
                 </motion.h1>
    
                 <motion.p
-                    className="text-lg sm:text-xl md:text-2xl font-medium text-accent text-center max-w-3xl"
+                    className="text-lg sm:text-xl md:text-2xl font-medium text-accent text-center max-w-3xl mt-10"
                     variants={itemVariants}
                     initial="hidden"
                     animate={controls}

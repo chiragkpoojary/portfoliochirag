@@ -41,6 +41,7 @@ const Home = () => {
   ];
   return (
     <>
+    <section id="home" className="scroll-mt-40">
     <motion.div className="my-20 2xl:mx-32"
     variants={{
       hidden:{opacity:0,y:75},
@@ -84,10 +85,10 @@ const Home = () => {
     </div>
     
     </div> 
-<section className="w-full ">
+<section id="home" className="w-full ">
 <div className="flex xl:justify-end justify-center">
       <motion.div
-      className="relative w-[390px] h-[360px] sm:w-[460px] sm:h-[410px] md:w-[490px] md:h-[450px] lg:w-[580px] lg:h-[540px] xl:h-[480px] xl:w-[500px] 2xl:h-[540px] 2xl:w-[600px] overflow-visible bg-gray-200 rounded-3xl  "
+      className="relative w-[390px] h-[360px] sm:w-[460px] sm:h-[410px] md:w-[490px] md:h-[450px] lg:w-[580px] lg:h-[540px] xl:h-[480px] xl:w-[500px] 2xl:h-[540px] 2xl:w-[600px] overflow-visible bg-gray-200 rounded-3xl xl:mt-10 2xl:mr-28 xl:mr-10"
       >
         <motion.img
           className='w-full h-full '
@@ -117,6 +118,7 @@ const Home = () => {
     </div>
  
     </motion.div>
+    </section>
     </>
   );
 };

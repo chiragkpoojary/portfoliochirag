@@ -129,10 +129,11 @@ const itemVariants = {
   </span>
 );
 return(
-  <motion.div className="container mx-auto absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center  mt-[204rem] sm:mt-[230rem] md:mt-[220rem] lg:mt-[168rem] xl:mt-[160rem]"  >
-     <motion.div className="flex flex-col items-center justify-center min-h-screen p-4 " ref={ref}>
+  <section id="contact" className="scroll-mt-6">
+  <motion.div className=" text-center mt-28 lg:px-10"  >
+     <motion.div className="flex flex-col items-center justify-center  " ref={ref}>
   <motion.h1 
-    className="text-4xl sm:text-5xl md:text-6xl font-bold text-center mb-12"
+    className="text-4xl sm:text-5xl md:text-6xl font-bold text-center pb-10"
     style={{
       backgroundImage: 'linear-gradient(to right, #818cf8, #06b6d4)',
       WebkitBackgroundClip: 'text',
@@ -145,10 +146,10 @@ return(
     Let's Connect
   </motion.h1>
   
-  <motion.div className="flex flex-col lg:flex-row items-center justify-between gap-x-32">
+  <motion.div className="flex flex-col lg:flex-row items-center justify-between gap-x-32 pt-10">
     <motion.div className="w-full lg:w-1/2 mb-12 lg:mb-0 ">
       <motion.img
-        className="max-w-[13rem] mx-auto sm:max-w-sm"
+        className="max-w-[13rem] mx-auto sm:max-w-sm "
         src="/vecteezy_happy-3d-student-boy-with-books-on-white-background-png_22484651.png"
         alt="Chirag's Avatar"
         variants={itemVariants}
@@ -176,7 +177,7 @@ return(
           </motion.div>
           
           <motion.div 
-            className="w-full lg:w-1/2"
+            className="w-full lg:w-1/2 relative lg:-top-10"
             variants={itemVariants}
             initial="hidden"
             animate={sequence >= 2 ? "visible" : "hidden"}
@@ -225,6 +226,7 @@ return(
       </motion.div>
     
     </motion.div>
+    </section>
   );
 };
 

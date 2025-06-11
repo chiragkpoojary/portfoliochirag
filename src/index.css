@@ -26,3 +26,6 @@ html, body, #root, .App {
 .container {
   min-height: 100vh; /* Ensure the container is at least 100vh tall */
 }
+html {
+  scroll-behavior: smooth;
+}

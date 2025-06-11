@@ -68,10 +68,11 @@ const Project = () => {
     
 
   return (
-    <motion.div className="container mx-auto absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center mt-[132rem] sm:mt-[133rem] md:mt-[128rem] lg:mt-[108rem] xl:mt-[100rem]"  >
-     <div className="flex flex-col items-center justify-center min-h-screen p-4 " ref={ref}>
+    <section id="projects" className="scroll-mt-40">
+    <motion.div className="text-center mt-44"  >
+     <div className="flex flex-col items-center justify-center " ref={ref}>
         <motion.h1 
-            className="text-4xl sm:text-5xl md:text-6xl font-bold text-center mb-8 sm:h-24 mt-10"
+            className="text-4xl sm:text-5xl md:text-6xl font-bold text-center sm:h-24 "
             style={{
                 backgroundImage: 'linear-gradient(to right, #818cf8, #06b6d4)',
                 WebkitBackgroundClip: 'text',
@@ -108,6 +109,7 @@ const Project = () => {
     </div>
     </div>
     </motion.div>
+    </section>
   );
 };
 

@@ -27,24 +27,24 @@ const Nav = () => {
     event.preventDefault();
     setnavclick(prevState => !prevState);
   }
-
   return (
     <>
-      <nav className={`shadow-xl h-auto w-full ${isScrolled ? 'bg-white' : 'bg-transparent'}`}>
+      <nav className={`sticky top-0 z-50 shadow-xl h-auto w-full ${isScrolled ? ' backdrop-blur-md bg-white/30':'bg-white'}`}>
         <div className="max-w-screen-2xl mx-auto px-4 flex justify-between items-center">
           <div className="sm:ml-10">
-            <img src="output-onlinepngtools (1).png" alt="logo" className="max-h-24"/>
+            <img src="output-onlinepngtools (1).png" alt="logo" className="max-h-24 p-0 m-0"/>
           </div>
           <div className="md:hidden block" onClick={clicked}>
             <Example />
           </div>
           <div className="hidden md:flex md:items-center md:space-x-14 xl:mr-40">
-            {['Home', 'Projects', 'Blogs'].map((item) => (
-              <span key={item} className="font-semibold text-xl text-gray-500 cursor-pointer">
-                {item}
+            {['Home', 'Projects', 'Contact'].map((item) => (
+              <span key={item} className="font-semibold text-xl text-gray-800 cursor-pointer">
+                 <a href={`#${item.toLowerCase()}`}> {item}</a>
+               
               </span>
             ))}
-            <a href="Chirag_resume.pdf">
+            <a href="Chirag_resume.pdf" target="_blank" rel="noopener noreferrer">
               <motion.button 
                 whileTap={{ scale: 0.85 }} 
                 className="bg-gradient-to-r from-indigo-400 to-cyan-400 text-white font-bold px-6 py-2 rounded-md"
