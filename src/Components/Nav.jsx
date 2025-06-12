@@ -7,7 +7,6 @@ const Nav = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    console.log("navclick state:", navclick);
     const handleScroll = () => {
       if (window.scrollY > 50) {
         setIsScrolled(true);
@@ -22,10 +21,9 @@ const Nav = () => {
   }, [navclick]);
 
   const clicked = (event) => {
-    console.log("navclick state:", navclick);
-    console.log("Clicked function called");
-    event.preventDefault();
+   // event.preventDefault();
     setnavclick(prevState => !prevState);
+    
   }
   return (
     <>
@@ -70,17 +68,20 @@ const Nav = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-            {['Home', 'Projects', 'Blogs'].map((item, index) => (
-              <motion.span 
-                key={item} 
-                className="font-semibold text-4xl text-white mb-6 cursor-pointer"
-                initial={{ opacity: 0, x: -50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: index * 0.1 }}
-              >
-                {item}
-              </motion.span>
-            ))}
+       {['Home', 'Projects', 'Contact'].map((item, index) => (
+  <motion.a
+    key={item}
+    href={`#${item.toLowerCase()}`}
+    className="font-semibold text-4xl text-white mb-6 cursor-pointer block"
+    initial={{ opacity: 0, x: -50 }}
+    animate={{ opacity: 1, x: 0 }}
+    transition={{ delay: index * 0.1 }}
+    onClick={clicked}
+  >
+    {item}
+  </motion.a>
+))}
+
             <motion.a 
               href="Chirag_resume.pdf"
               initial={{ opacity: 0, x: -50 }}

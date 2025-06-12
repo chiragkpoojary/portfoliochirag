@@ -33,7 +33,7 @@ const containerVariants = {
   visible: {
       opacity: 1,
       transition: {
-          staggerChildren: 0.5
+          staggerChildren: 0.3
       }
   }
 };
@@ -44,7 +44,7 @@ const itemVariants = {
       opacity: 1,
       y: 0,
       transition: {
-          duration: 1.
+          duration: 0.5
       }
   }
 };
@@ -129,8 +129,8 @@ const itemVariants = {
   </span>
 );
 return(
-  <section id="contact" className="scroll-mt-6">
-  <motion.div className=" text-center mt-28 lg:px-10"  >
+  <section id="contact" className="scroll-mt-40 ">
+  <motion.div className=" text-center  lg:px-10"  >
      <motion.div className="flex flex-col items-center justify-center  " ref={ref}>
   <motion.h1 
     className="text-4xl sm:text-5xl md:text-6xl font-bold text-center pb-10"
@@ -177,7 +177,7 @@ return(
           </motion.div>
           
           <motion.div 
-            className="w-full lg:w-1/2 relative lg:-top-10"
+            className="w-full lg:w-1/2"
             variants={itemVariants}
             initial="hidden"
             animate={sequence >= 2 ? "visible" : "hidden"}

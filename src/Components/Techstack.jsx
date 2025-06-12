@@ -91,7 +91,7 @@ function TechStack() {
         <motion.div className="  text-center "  >
             <div className="flex flex-col items-center justify-center">
                 <motion.h1 
-                    className="text-4xl sm:text-5xl md:text-6xl font-bold text-center mt-24"
+                    className="text-4xl sm:text-5xl md:text-6xl font-bold text-center xl:mt-24 "
                     style={{
                         backgroundImage: 'linear-gradient(to right, #818cf8, #06b6d4)',
                         WebkitBackgroundClip: 'text',

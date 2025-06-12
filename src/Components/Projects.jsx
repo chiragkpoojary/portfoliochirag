@@ -50,7 +50,7 @@ const Project = () => {
         visible: {
             opacity: 1,
             transition: {
-                staggerChildren: 0.8
+                staggerChildren: 1
             }
         }
     };
@@ -68,9 +68,9 @@ const Project = () => {
     
 
   return (
-    <section id="projects" className="scroll-mt-40">
-    <motion.div className="text-center mt-44"  >
-     <div className="flex flex-col items-center justify-center " ref={ref}>
+    <section id="projects" className="scroll-mt-40" ref={ref}>
+    <motion.div className="text-center mt-28"  >
+     <div className="flex flex-col items-center justify-center " >
         <motion.h1 
             className="text-4xl sm:text-5xl md:text-6xl font-bold text-center sm:h-24 "
             style={{
