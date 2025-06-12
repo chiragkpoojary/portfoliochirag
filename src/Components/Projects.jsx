@@ -8,6 +8,8 @@ import {
 import {  useInView, useAnimation } from 'framer-motion'
 import { useEffect } from 'react'
 
+import { ArrowRight } from "lucide-react"; 
+
 const arrproject = [{
     projectname: "Jokes App",
     image: "./projects/image.png",
@@ -85,7 +87,7 @@ const Project = () => {
         >
             Projects
         </motion.h1>
-        <div className="container mx-auto px-4 py-12">
+        <div className="container mx-auto px-4 pt-12">
       <motion.div className="grid grid-cols-1 lg:grid-cols-2 gap-10 justify-items-center"
       variants={containerVariants}
                     initial="hidden"
@@ -105,10 +107,23 @@ const Project = () => {
           />
           </motion.div>
         ))}
+        
       </motion.div>
+      <div className="flex justify-center items-center mt-24 mb-24">
+ <motion.button
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+  onClick={() => window.open("https://github.com/chiragkpoojary?tab=repositories", "_blank")}
+ className="flex items-center gap-3 px-6 py-3 border-2 border-cyan-500 bg-white rounded-full font-semibold text-lg tracking-wide shadow-md hover:shadow-lg transition-all duration-300 hover:ring-2 hover:ring-offset-2 hover:ring-cyan-400 bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-blue-600">
+  SEE MORE
+  <ArrowRight className="w-7 h-7 text-black " />
+</motion.button>
+</div>
     </div>
     </div>
     </motion.div>
+
+
     </section>
   );
 };
