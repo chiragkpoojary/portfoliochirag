@@ -93,26 +93,34 @@ const itemVariants = {
   href:"https://www.instagram.com/chirag_k_poojary/?hl=en",
   src:"/social-media/instagram.webp",
   alt:"Instagram",
-  name:"Instagram"
+  name:"Instagram",
+  target:"_blank",
+   rel:"noopener noreferrer"
  },
 
  {
-  href:"https://www.instagram.com/chirag_k_poojary/?hl=en",
-  src:"/social-media/gmail.webp",
-  alt:"Instagram",
-  name:"Instagram"
- },
+  href: "https://mail.google.com/mail/?view=cm&fs=1&to=chiragkpoojary30@gmail.com",
+  src: "/social-media/gmail.webp",
+  alt: "Gmail",
+  name: "Gmail",
+  target: "_blank",
+  rel: "noopener noreferrer"
+},
  {
-  href:"https://www.instagram.com/chirag_k_poojary/?hl=en",
+  href:"https://www.linkedin.com/in/chirag-poojary-3a7926248?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
   src:"/social-media/linkedin.webp",
-  alt:"Instagram",
-  name:"Instagram"
+  alt:"Linkedin",
+  name:"Linkedin",
+   target:"_blank",
+   rel:"noopener noreferrer"
  },
  {
-  href:"https://www.instagram.com/chirag_k_poojary/?hl=en",
+  href:"https://www.github.com/chiragkpoojary/",
   src:"/social-media/github.webp",
-  alt:"Instagram",
-  name:"Instagram"
+  alt:"github",
+  name:"github",
+   target:"_blank",
+   rel:"noopener noreferrer"
  }
 ]
  const SocialIcon = ({ href, src, alt}) => (
