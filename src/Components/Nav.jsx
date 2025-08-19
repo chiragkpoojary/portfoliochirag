@@ -20,8 +20,8 @@ const Nav = () => {
     };
   }, [navclick]);
 
-  const clicked = (event) => {
-    event.preventDefault();
+  const clicked = () => {
+
     setnavclick(prevState => !prevState);
     
   }
@@ -74,18 +74,21 @@ const Nav = () => {
   <motion.a
     key={item}
     href={`#${item.toLowerCase()}`}
-    className="font-semibold text-4xl text-white mb-6 cursor-pointer block  "
+    className="font-semibold text-4xl text-white mb-6 cursor-pointer block hover:bg-gradient-to-r hover:from-cyan-500 hover:to-blue-500
+               hover:bg-clip-text hover:text-transparent transition duration-300 "
     initial={{ opacity: 0, x: -50 }}
     animate={{ opacity: 1, x: 0 }}
     transition={{ delay: index * 0.1 }}
     onClick={clicked}
   >
-    {item}
+     {item}
+
+
   </motion.a>
 ))}
 
             <motion.a 
-              href="Chirag_resume.pdf"
+              href="http://316aiet5vaiyby9a.public.blob.vercel-storage.com/dev.pdf"
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.3 }}
