@@ -82,7 +82,7 @@ function TechStack() {
             opacity: 1,
             y: 0,
             transition: {
-                duration: 0.9
+                duration: 1.5
             }
         }
     };
@@ -90,20 +90,21 @@ function TechStack() {
     return (
         <motion.div className="  text-center "  >
             <div className="flex flex-col items-center justify-center">
-                <motion.h1 
-                    className="text-4xl sm:text-5xl md:text-6xl font-bold text-center xl:mt-24 "
-                    style={{
-                        backgroundImage: 'linear-gradient(to right, #818cf8, #06b6d4)',
-                        WebkitBackgroundClip: 'text',
-                        WebkitTextFillColor: 'transparent',
-                    }}
+                <motion.h1
+                    className="text-4xl sm:text-5xl md:text-6xl font-bold text-center xl:mt-24
+             bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent
+             inline-block leading-tight pb-2"
                     variants={itemVariants}
                     initial="hidden"
-                    animate={controls} ref={ref}
+                    animate={controls}
+                    ref={ref}
+                    viewport={{ once: true }}
                 >
                     Technology Stack
                 </motion.h1>
-   
+
+
+
                 <motion.p
                     className="text-lg sm:text-xl md:text-2xl font-medium text-accent text-center max-w-3xl mt-10"
                     variants={itemVariants}
@@ -130,6 +131,7 @@ function TechStack() {
                                 alt={item.name}
                                 className="w-28 h-28 object-contain"
                                 whileHover={{ scale: 0.85 }}
+                                loading="lazy"
                             />
                             <p className="mt-2 text-sm text-center">{item.name}</p>
                         </motion.div>

@@ -5,11 +5,13 @@ import { motion, useInView } from 'framer-motion';
 const Home = () => {
   const ref = React.useRef(null);
   const inView = useInView(ref,{once: true});
+    const [loaded, setLoaded] = React.useState(false);
   const animatedImages = [
     {
       className: 'w-[110px] h-auto md:w-[150px] xl:w-[170px] absolute top-1/4 left-1  md:-left-3.5 lg:top-24 lg:-left-14 z-[1]',
       src: "/quadrilateral.webp",
       alt: '',
+
       initial: { opacity: 0, x: -100 },
       animate: { opacity: 1, x: 0 },
       transition: { delay: 0.4, duration: 0.8 },
@@ -91,13 +93,18 @@ const Home = () => {
       className="relative w-[390px] h-[360px] sm:w-[460px] sm:h-[410px] md:w-[490px] md:h-[450px] lg:w-[580px] lg:h-[540px] xl:h-[480px] xl:w-[500px] 2xl:h-[540px] 2xl:w-[600px] overflow-visible bg-gray-200 rounded-3xl xl:mt-10 2xl:mr-28 xl:mr-10"
       >
         <motion.img
-          className='w-full h-full '
+
           src="/vecteezy_happy-3d-student-boy-with-books-on-white-background-png_22484651.png"
           alt="Chirag's Avatar"
           initial={{ opacity: 0.5, y: 500 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: 0.2, duration: 1 }}
+          transition={{ delay: 0.1, duration: 0.5}}
           viewport={{ once: true }}
+          loading="lazy"
+          onLoad={() => setLoaded(true)}
+          className={`w-full h-full transition duration-700 ${
+              loaded ? "blur-0" : "blur-md"
+          }`}
         />
      
       {animatedImages.map(({ className, src, alt, initial, animate, transition }, index) => (
@@ -110,6 +117,7 @@ const Home = () => {
           animate={inView ? animate : {}}
           transition={transition}
           aria-hidden={!inView}
+          loading="lazy"
         />
       ))}
       </motion.div>

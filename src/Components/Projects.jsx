@@ -11,29 +11,29 @@ import { useEffect } from 'react'
 import { ArrowRight } from "lucide-react"; 
 
 const arrproject = [{
-    projectname: "Jokes App",
-    image: "./projects/image.png",
-    discription:"The Jokes App is a React-based web application that fetches data from an external API and displays a collection of jokes on the user interface. The application aims to provide a seamless and enjoyable experience for users who want to read and share jokes.",
-    link:"https://github.com/ChiragKpoojary/Jokes_generator"
+    projectname: "MultiPlayer ChessApp",
+    image: "./projects/chess.png",
+    discription:"CNote is a collaborative note-taking app with tags, search, and sharing features, helping students organize, store, and access notes seamlessly across devices",
+    link:"https://connectchess.vercel.app"
 },
 {
-projectname: "Music App",
-image: "./projects/img2.png",
-discription:"The Music Player App is a user-friendly web application that allows users to play, pause, and skip music tracks. Built with plain JavaScript and HTML, this app offers a straightforward and enjoyable music listening experience.",
-link:"https://chiragkpoojary.github.io/musicplayer.github.io/"
+projectname: "CNote",
+image: "./projects/cnote.png",
+discription:"ChessConnect is an interactive chess app with live video chat, multiplayer support, and legal move validation, enabling engaging one-on-one gameplay with real-time communication.",
+link:"https://cnote.vercel.app"
 },
-{
-    projectname: "Passward Manager",
-    image: "./projects/img3.png",
-    discription:"The Music Player App is a user-friendly web application that allows users to play, pause, and skip music tracks. Built with plain JavaScript and HTML, this app offers a straightforward and enjoyable music listening experience.",
-    link:"https://github.com/ChiragKpoojary/passwardmanager"
+    {
+        projectname: "Jokes App",
+        image: "./projects/image.png",
+        discription:"The Jokes App is a React-based web application that fetches data from an external API and displays a collection of jokes on the user interface. The application aims to provide a seamless and enjoyable experience for users who want to read and share jokes.",
+        link:"https://github.com/ChiragKpoojary/Jokes_generator"
     },
     {
-        projectname: " Calculator",
-        image: "./projects/img4.png",
+        projectname: "Music App",
+        image: "./projects/img2.png",
         discription:"The Music Player App is a user-friendly web application that allows users to play, pause, and skip music tracks. Built with plain JavaScript and HTML, this app offers a straightforward and enjoyable music listening experience.",
-        link:"https://github.com/ChiragKpoojary/passwardmanager"
-        },
+        link:"https://chiragkpoojary.github.io/musicplayer.github.io/"
+    },
 ];
 
 const Project = () => {
@@ -63,7 +63,7 @@ const Project = () => {
             opacity: 1,
             y: 0,
             transition: {
-                duration: 0.9
+                duration: 2
             }
         }
     };
@@ -104,6 +104,7 @@ const Project = () => {
             title={item.projectname} 
             dis={item.discription} 
             link={item.link}
+            loading={"lazy"}
           />
           </motion.div>
         ))}

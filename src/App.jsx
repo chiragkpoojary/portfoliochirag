@@ -1,34 +1,27 @@
-import React from 'react';
-import Nav from './Components/Nav';
-import Techstack from './Components/Techstack';
-import Home from './Components/Home';
-import Project from './Components/Projects';
-import LetsConnect from './Components/LetsConnect';
-import Footer from './Components/Footer';
-import Quote from './Components/Quote';
-window.addEventListener("load", () => {
-  if (window.location.hash) {
-    history.replaceState(null, "", window.location.pathname);
-  window.scrollTo(0, 0);
-  }
-});
+import React, { Suspense, lazy } from "react";
+import Nav from "./Components/Nav";
+import Home from "./Components/Home";
 
+// Lazy load heavy sections
+const Techstack = lazy(() => import("./Components/Techstack"));
+const Project = lazy(() => import("./Components/Projects"));
+const LetsConnect = lazy(() => import("./Components/LetsConnect"));
+const Footer = lazy(() => import("./Components/Footer"));
 
 function App() {
-  return (
-    <div >
-      <Nav />
-     
-         <Home />
-      <Techstack />
-       <Project />
-           <LetsConnect />
-      
-   
-      <Footer />
-      
-    </div>
-  );
+    return (
+        <div>
+            <Nav />
+            <Home />
+
+            <Suspense fallback={<div className="text-center p-10">Loading...</div>}>
+                <Techstack />
+                <Project />
+                <LetsConnect />
+                <Footer />
+            </Suspense>
+        </div>
+    );
 }
 
 export default App;

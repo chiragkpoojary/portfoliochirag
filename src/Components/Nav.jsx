@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
 import { motion, AnimatePresence } from 'framer-motion';
 import { Example } from "./Animated-menu";
 
@@ -21,7 +21,7 @@ const Nav = () => {
   }, [navclick]);
 
   const clicked = (event) => {
-   // event.preventDefault();
+    event.preventDefault();
     setnavclick(prevState => !prevState);
     
   }
@@ -37,12 +37,14 @@ const Nav = () => {
           </div>
           <div className="hidden md:flex md:items-center md:space-x-14 xl:mr-40">
             {['Home', 'Projects', 'Contact'].map((item) => (
-              <span key={item} className="font-semibold text-xl text-gray-800 cursor-pointer">
-                 <a href={`#${item.toLowerCase()}`}> {item}</a>
-               
+              <span key={item} className="font-semibold text-xl text-gray-800 cursor-pointer hover:bg-gradient-to-r hover:from-cyan-500 hover:to-blue-500
+               hover:bg-clip-text hover:text-transparent transition duration-300">
+                 <a href={`#${item.toLowerCase()}`}> {item}
+                 </a>
+
               </span>
             ))}
-            <a href="Resume.pdf" target="_blank" rel="noopener noreferrer">
+            <a href="https://316aiet5vaiyby9a.public.blob.vercel-storage.com/dev.pdf" target="_blank" rel="noopener noreferrer">
               <motion.button 
                 whileTap={{ scale: 0.85 }} 
                 className="bg-gradient-to-r from-indigo-400 to-cyan-400 text-white font-bold px-6 py-2 rounded-md"
@@ -72,7 +74,7 @@ const Nav = () => {
   <motion.a
     key={item}
     href={`#${item.toLowerCase()}`}
-    className="font-semibold text-4xl text-white mb-6 cursor-pointer block"
+    className="font-semibold text-4xl text-white mb-6 cursor-pointer block  "
     initial={{ opacity: 0, x: -50 }}
     animate={{ opacity: 1, x: 0 }}
     transition={{ delay: index * 0.1 }}

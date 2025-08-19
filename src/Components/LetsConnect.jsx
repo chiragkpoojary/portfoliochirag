@@ -162,6 +162,7 @@ return(
         alt="Chirag's Avatar"
         variants={itemVariants}
         initial="hidden"
+        loading="lazy"
         animate={sequence >= 1 ? "visible" : "hidden"}
       />
       <motion.div 
