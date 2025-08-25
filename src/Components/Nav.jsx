@@ -27,7 +27,7 @@ const Nav = () => {
   }
   return (
     <>
-      <nav className={`sticky top-0 z-50 shadow-xl h-auto w-full ${isScrolled ? ' backdrop-blur-md bg-white/30':'bg-white'}`}>
+      <nav className={`sticky top-0 z-50 shadow-xl  max-h-24 w-full ${isScrolled ? ' backdrop-blur-md bg-white/30':'bg-white'}`}>
         <div className="max-w-screen-2xl mx-auto px-4 flex justify-between items-center max-h-24">
           <div className="sm:ml-10">
             <img src="output-onlinepngtools (1).png" alt="logo" className="max-h-24 p-0 m-0"  loading="lazy"/>

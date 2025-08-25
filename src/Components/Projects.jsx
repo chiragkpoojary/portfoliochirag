@@ -23,10 +23,10 @@ discription:"ChessConnect is an interactive chess app with live video chat, mult
 link:"https://cnote.vercel.app"
 },
     {
-        projectname: "Jokes App",
-        image: "./projects/image.png",
-        discription:"The Jokes App is a React-based web application that fetches data from an external API and displays a collection of jokes on the user interface. The application aims to provide a seamless and enjoyable experience for users who want to read and share jokes.",
-        link:"https://github.com/ChiragKpoojary/Jokes_generator"
+        projectname: "ProcMam CLI",
+        image: "./projects/procmom.png",
+        discription:"ProcMan is a terminal-based process monitor written in Rust, inspired by top and htop.It allows you to view running processes, CPU and memory usage, number of threads, and process priority in real-time.",
+        link:"https://github.com/ChiragKpoojary/ProcMan"
     },
     {
         projectname: "Music App",
