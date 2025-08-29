@@ -44,7 +44,7 @@ const Nav = () => {
 
               </span>
             ))}
-            <a href="https://316aiet5vaiyby9a.public.blob.vercel-storage.com/dev.pdf" target="_blank" rel="noopener noreferrer">
+            <a href="https://316aiet5vaiyby9a.public.blob.vercel-storage.com/resume.pdf" target="_blank" rel="noopener noreferrer">
               <motion.button 
                 whileTap={{ scale: 0.85 }} 
                 className="bg-gradient-to-r from-indigo-400 to-cyan-400 text-white font-bold px-6 py-2 rounded-md"
@@ -106,5 +106,6 @@ const Nav = () => {
     </>
   );
 };
+
 
 export default Nav;
