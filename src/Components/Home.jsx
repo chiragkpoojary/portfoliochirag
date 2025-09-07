@@ -69,6 +69,7 @@ const Home = () => {
 >
   <div className="flex flex-col sm:flex-row xl:flex-col justify-center items-center xl:items-start 2xl:justify-start z-[10] sm:ml-10 lg:text-nowrap 2xl:text-wrap text-center xl:ml-0 xl:pl-0 xl:mr-40">
     <span className="">Software</span>
+     <span className="">System</span>
     <span className="">Developer</span>
       </div>
 </motion.h2>
