@@ -52,7 +52,34 @@ const technologyStack = [
         name: "Git",
         image: "/tech-icons/git.png",
        
+    },
+        {
+        name: "Rust",
+        image: "/tech-icons/rust.png",
+       
+    },
+        {
+        name: "Java",
+        image: "/tech-icons/java.png",
+       
+    },
+        {
+        name: "Npm",
+        image: "/tech-icons/npm.png",
+       
+    },
+        {
+        name: "Cloud",
+        image: "/tech-icons/cloud.png",
+       
+    },
+     
+          {
+        name: "Docker",
+        image: "/tech-icons/docker.png",
+       
     }
+
 ]
 
 function TechStack() {
@@ -129,7 +156,7 @@ function TechStack() {
                             <motion.img
                                 src={item.image}
                                 alt={item.name}
-                                className="w-28 h-28 object-contain"
+                                className="w-28 h-28 object-contain xl:w-36 xl:h-36"
                                 whileHover={{ scale: 0.85 }}
                                 loading="lazy"
                             />
