@@ -68,10 +68,9 @@ const Home = () => {
   aria-label="Full Stack Web Developer"
 >
   <div className="flex flex-col sm:flex-row xl:flex-col justify-center items-center xl:items-start 2xl:justify-start z-[10] sm:ml-10 lg:text-nowrap 2xl:text-wrap text-center xl:ml-0 xl:pl-0 xl:mr-40">
-    <span className="">Full Stack</span>
-    <span className=" ">Web</span>
+    <span className="">Software</span>
     <span className="">Developer</span>
-  </div>
+      </div>
 </motion.h2>
                     
                     <motion.p 
@@ -79,10 +78,9 @@ const Home = () => {
              font-semibold text-accent
              text-center xl:text-left
              max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl
-             mt-4 xl:mr-20  "
+             mt-4 xl:mr-[3.8rem]  "
 >
-  I'm Chirag Poojary, an aspiring MERN developer with a passion for creating
-  dynamic and responsive web applications.
+I'm Chirag Poojary, an aspiring Software Developer passionate about solving real-world problems through technology and building impactful solutions.
 </motion.p>
     </div>
     
