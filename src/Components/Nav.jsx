@@ -88,7 +88,7 @@ const Nav = () => {
 ))}
 
             <motion.a 
-              href="http://316aiet5vaiyby9a.public.blob.vercel-storage.com/dev.pdf"
+              href="http://316aiet5vaiyby9a.public.blob.vercel-storage.com/resume.pdf"
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.3 }}
@@ -109,3 +109,4 @@ const Nav = () => {
 
 
 export default Nav;
+
